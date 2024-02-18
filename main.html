@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="note.ico" type="image/x-icon">
+  <title>MusicHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffa500;
+      padding: 20px;
+      text-align: center;
+      font-size: 25px;
+      color: #000000;
+    }
+
+    nav {
+      background-color: #666;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .introduction {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .introduction h2 {
+      color: #111;
+    }
+
+    .introduction p {
+      color: #222;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 0.75;
+    }
+
+    .introduction img {
+      width: 200px; 
+      height: auto;
+      font-style: italic;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
+    }
+
+    th,
+    td {
+      border: 2.5px solid rgb(100, 100, 100);
+      padding: 8px;
+    }
+
+    .english_songs {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .english_songs h1{
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .english_songs h2 {
+      color: #111;
+    }
+    
+    .english_songs h3 {
+      color: #111;
+      margin-top: 50px;
+    }
+
+    .english_songs p {
+      color: #222;
+      font-style: italic;
+    }
+
+    #Scroll_Up_Button {
+      transition: transform 0.3s;
+    }
+
+    #Scroll_Up_Button:hover {
+      transform: scale(1.2);
+    }
+
+    #Scroll_Up_Button:active {
+      transform: scale(1);
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="display: inline-block; vertical-align: middle;">Welcome to</h1>
+    <img id = "MusicHub" src="music_hub.png" style="max-width: 100%; max-height: 100px; vertical-align: middle;" alt="MusicHub">
+    <script>
+      const MusicHub = document.getElementById('MusicHub');
+      const Suspicious = new Audio('./mp3/Suspicious.mp3');
+      function Play_mp3() {
+        Suspicious.play();
+      }
+      MusicHub.addEventListener('click', () => {
+        Play_mp3();
+      });
+    </script>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#english_songs">English Songs</a></li>
+      <li><a href="#chinese_songs">Chinese Songs</a></li>
+      <li><a href="#web_developers">Web Developers</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="introduction">
+      <h2>Introduction</h2>
+      <p>This is a website that collects songs or sounds effects in the internet</p>
+      <p>這是一個收集互聯網上歌曲或音效的網站</p>
+      <p>The copyright belongs to the creator</p>
+      <p>版權歸創作者所有</p>
+      <p>For optimal user experience, it is recommended that you use a computer for browsing</p>
+      <p>為了獲得最佳的用戶體驗，建議您使用電腦進行瀏覽</p>
+      <p>All English songs are ordered alphabetically</p>
+      <p>所有英文歌曲按字母順序排序</p>
+    </section>
+  </main>
+
+  <main>
+    <section class="english_songs">
+      <h1><a id="english_songs">English Songs</a></h1>
+      <h2>You can pick your songs here</h2>
+      <!--英文歌曲字母挑選列表-->
+      <table>
+        <tr>
+          <th><a href="#a">A</a></th>
+          <th><a href="#b">B</a></th>
+          <th><a href="#c">C</a></th>
+          <th><a href="#d">D</a></th>
+          <th><a href="#e">E</a></th>
+        </tr>
+        <tr>
+          <th><a href="#f">F</a></th>
+          <th><a href="#g">G</a></th>
+          <th><a href="#h">H</a></th>
+          <th><a href="#i">I</a></th>
+          <th><a href="#j">J</a></th>
+        </tr>
+        <tr>
+          <th><a href="#k">K</a></th>
+          <th><a href="#l">L</a></th>
+          <th><a href="#m">M</a></th>
+          <th><a href="#n">N</a></th>
+          <th><a href="#o">O</a></th>
+        </tr>
+        <tr>
+          <th><a href="#p">P</a></th>
+          <th><a href="#q">Q</a></th>
+          <th><a href="#r">R</a></th>
+          <th><a href="#s">S</a></th>
+          <th><a href="#t">T</a></th>
+        </tr>
+        <tr>
+          <th><a href="#u">U</a></th>
+          <th><a href="#v">V</a></th>
+          <th><a href="#w">W</a></th>
+          <th><a href="#x">X</a></th>
+          <th><a href="#y">Y</a></th>
+        </tr>
+      </table>
+      <!--Import JS File-->
+      <script src="Scroll_Up.js"></script>
+      <!--Import JS File-->
+      <h3 id="a">A Thousand Miles</h3>
+      <audio src="mp3\A_Thousand_Miles.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Aliez</h3>
+      <audio src="mp3\Aliez.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>All Falls Down</h3>
+      <audio src="mp3\All_Falls_Down.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>All For Love</h3>
+      <audio src="mp3\All_For_Love.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>All My People</h3>
+      <audio src="mp3\All_My_People.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Alone(Rentz)</h3>
+      <audio src="mp3\Alone.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Alone(Marshmallow)</h3>
+      <audio src="mp3\Alone2.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Angles</h3>
+      <audio src="mp3\Angles.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Animals</h3>
+      <audio src="mp3\Animals.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>As It Was</h3>
+      <audio src="mp3\As_It_Was.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Asphyxia</h3>
+      <audio src="mp3\Asphyxia.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Awake</h3>
+      <audio src="mp3\Awake.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="b">Better Days</h3>
+      <audio src="mp3\Better_Days.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="c">C U Again</h3>
+      <audio src="mp3\C_U_Agian.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>CandyLand</h3>
+      <audio src="mp3\CandyLand.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Catch My Breath</h3>
+      <audio src="mp3\Catch_My_Breath.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="d">Darkside</h3>
+      <audio src="mp3\Darkside.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Daylight</h3>
+      <audio src="mp3\Daylight.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Deja Vu</h3>
+      <audio src="mp3\Deja_Vu.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Despacito</h3>
+      <audio src="mp3\Despacito.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Despair</h3>
+      <audio src="mp3\Despair.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Dream It Possible</h3>
+      <audio src="mp3\Dream_It_Possible.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Drown</h3>
+      <audio src="mp3\Drown.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Dusk Till Down</h3>
+      <audio src="mp3\Dusk_Till_Down.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="e">Empire Of Angles</h3>
+      <audio src="mp3\Empire_Of_Angles.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Empty Love</h3>
+      <audio src="mp3\Empty_Love.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Empty Love(Slowed)</h3>
+      <audio src="mp3\Empty_Love2.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="f">Fade Away</h3>
+      <audio src="mp3\Fade_Away.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Falling Down</h3>
+      <audio src="mp3\Falling_Down.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Fatal Love</h3>
+      <audio src="mp3\Fatal_Love.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Fearless</h3>
+      <audio src="mp3\Fearless.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Fire</h3>
+      <audio src="mp3\Fire.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Firefly</h3>
+      <audio src="mp3\Firefly.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>For Ya</h3>
+      <audio src="mp3\For_Ya.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>FunkyTown</h3>
+      <audio src="mp3\FunkyTown.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="g">Go</h3>
+      <audio src="mp3\Go.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Good Time</h3>
+      <audio src="mp3\Good_Time.mp3" controls></audio>   
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Greenleaves</h3>
+      <audio src="mp3\Greenleaves.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="h">Halloween</h3>
+      <audio src="mp3\Halloween.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button> 
+      <h3>Heroes Tonight</h3>
+      <audio src="mp3\Heroes_Tonight.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Higher</h3>
+      <audio src="mp3\Higher.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Holy Grail</h3>
+      <audio src="mp3\Holy_Grail.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="i">Illusionary Daytime</h3>
+      <audio src="mp3\Illusionary_Daytime.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>If_I_Can_Stop_A_Heart_From_Broking</h3>
+      <audio src="mp3\If_I_Can_Stop_A_Heart_From_Broking.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button> 
+      <h3>Immortals</h3>
+      <audio src="mp3\Immortals.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Infinity</h3>
+      <audio src="mp3\Infinity.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Invincible</h3>
+      <audio src="mp3\Invincible.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Irony</h3>
+      <audio src="mp3\Irony.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Itzhak Perlman Tango</h3>
+      <audio src="mp3\Itzhak_Perlman_Tango.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="k">Kalo Ngana Rindu Coba Dengar Ni Lagu</h3>
+      <audio src="mp3\Kalo_Ngana_Rindu_Coba_Dengar_Ni_Lagu.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button> 
+      <h3>Ke Cap Gap Ba Gia</h3>
+      <audio src="mp3\Ke_Cap_Gap_Ba_Gia.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Komorebi</h3>
+      <audio src="mp3\Komorebi.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="l">Lake Arrowhead</h3>
+      <audio src="mp3\Lake_Arrowhead.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>League Of Legends</h3>
+      <audio src="mp3\League_Of_Legends.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Lemon</h3>
+      <audio src="mp3\Lemon.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Life</h3>
+      <audio src="mp3\Life.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Light It Up</h3>
+      <audio src="mp3\Light_It_Up.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Lone Ranger</h3>
+      <audio src="mp3\Lone_Ranger.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Love Is Gone</h3>
+      <audio src="mp3\Love_Is_Gone.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Love Is Gone Remix</h3>
+      <audio src="mp3\Love_Is_Gone_Remix.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="m">Masked Heroes</h3>
+      <audio src="mp3\Masked_Heroes.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Midnight City</h3>
+      <audio src="mp3\Midnight_City.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Monody</h3>
+      <audio src="mp3\Monody.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Morsmordre</h3>
+      <audio src="mp3\Morsmordre.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>My Soul</h3>
+      <audio src="mp3\My_Soul.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="n">Nevada</h3>
+      <audio src="mp3\Nevada.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Never Gonna Give You Up</h3>
+      <audio src="mp3\Never_Gonna_Give_You_Up.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Ninelie</h3>
+      <audio src="mp3\Ninelie.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>No Normal No More</h3>
+      <audio src="mp3\No_Normal_No_More.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>No Roots</h3>
+      <audio src="mp3\NO_Roots.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="o">Outside</h3>
+      <audio src="mp3\Outside.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="p">Payphone</h3>
+      <audio src="mp3\Payphone.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Power</h3>
+      <audio src="mp3\Power.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="r">Rather Be</h3>
+      <audio src="mp3\Rather_Be.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Remember Our Summer</h3>
+      <audio src="mp3\Remember_Our_Summer.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Remeber Our Summer(Remix)</h3>
+      <audio src="mp3\Remember_Our_Summer_Violin.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Reverse</h3>
+      <audio src="mp3\Remember_Our_Summer_Remix.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Remeber Our Summer(Violin)</h3>
+      <audio src="mp3\Reverse.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Rise And Fall</h3>
+      <audio src="mp3\Rise_And_Fall.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Rise</h3>
+      <audio src="mp3\Rise.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>RYUKYUVANIA</h3>
+      <audio src="mp3\RYUKYUVANIA.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="s">Sakura Tears</h3>
+      <audio src="mp3\Sakura_Tears.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Samurai</h3>
+      <audio src="mp3\Samurai.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Seasons</h3>
+      <audio src="mp3\Seasons.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>See Tinth</h3>
+      <audio src="mp3\See_Tinth.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Shape_Of_You</h3>
+      <audio src="mp3\Shape_Of_You.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Shed A Light(Lyrics)</h3>
+      <audio src="mp3\Shed_A_Light_Lyrics.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Shed_A-_Light(Instrumental Mix)</h3>
+      <audio src="mp3\Shed_A-_Light_Instrumental_Mix.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Sky_High</h3>
+      <audio src="mp3\Sky_High.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>So Far Away</h3>
+      <audio src="mp3\So_Far_Away.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Sold Out</h3>
+      <audio src="mp3\Sold_Out.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Something Just Like This</h3>
+      <audio src="mp3\Some_Thing_Just_Like_This.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Star Sky</h3>
+      <audio src="mp3\Star_Sky.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Stay</h3>
+      <audio src="mp3\Stay.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Stray</h3>
+      <audio src="mp3\Stray.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Summer Time</h3>
+      <audio src="mp3\Summer_Time.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Sun</h3>
+      <audio src="mp3\Sun.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Sunburst</h3>
+      <audio src="mp3\Sunburst.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Sweet Dreams</h3>
+      <audio src="mp3\Sweet_Dreams.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="t">Take Me Higher</h3>
+      <audio src="mp3\Take_Me_Higher.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Teeth</h3>
+      <audio src="mp3\Teeth.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Temple</h3>
+      <audio src="mp3\Temple.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>That Girl</h3>
+      <audio src="mp3\That_Girl.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>The Best Of Me</h3>
+      <audio src="mp3\The_Best_Of_Me.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>The Middle Of The Night</h3>
+      <audio src="mp3\The_Middle_Of_The_Night.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>The Spectre</h3>
+      <audio src="mp3\The_Spectre.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>This Far</h3>
+      <audio src="mp3\This_Far.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>TIme_Back</h3>
+      <audio src="mp3\Time_Back.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Time To Pretend</h3>
+      <audio src="mp3\Time_To_Pretend.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>To Be Continued</h3>
+      <audio src="mp3\TO_Be_Continued.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Together Forever</h3>
+      <audio src="mp3\Together_Forever.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Toxic</h3>
+      <audio src="mp3\Toxic.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Trouble</h3>
+      <audio src="mp3\Trouble.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>TSA Music</h3>
+      <audio src="mp3\TSA_Music.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>TSA Music2</h3>
+      <audio src="mp3\TSA_Music3.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="u">Umbrella</h3>
+      <audio src="mp3\Umbrella.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Unkind Star</h3>
+      <audio src="mp3\Unkind_Star.mp3" controls></audio>
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Unstoppable</h3>
+      <audio src="mp3\Unstoppable.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="v">Victory</h3>
+      <audio src="mp3\Victory.mp3" controls></audio>  
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="w">Wake</h3>
+      <audio src="mp3\Wake.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Way Back Home</h3>
+      <audio src="mp3\Way_Back_Home.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Way Back</h3>
+      <audio src="mp3\Way_Back.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Way Back Remix</h3>
+      <audio src="mp3\Way_Back_Remix.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>We_No_Speak_Americano.mp3</h3>
+      <audio src="mp3\We_No_Speak_Americano.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>Wild Fire</h3>
+      <audio src="mp3\Wild_Fire.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3>WTF</h3>
+      <audio src="mp3\WTF.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+      <h3 id="y">You're Beautiful</h3>
+      <audio src="mp3\You're_Beautiful.mp3" controls></audio> 
+      <br/>
+      <button id="Scroll_Up_Button" onclick="ScrollToTop()">Back To The Top</button>
+    </section>
+  </main>
+
+</body>
+
+</html>
